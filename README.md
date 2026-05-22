@@ -1,1 +1,24 @@
-# dbhtmltest
+/demo-healthy-diet/
+  index.html
+  login.html
+  register.html
+  member.html
+  profile-view.html
+  profile-edit.html
+  goals.html
+  food/
+    search.html
+    categories.html
+    list.html
+    detail.html
+  log/
+    new.html
+    history.html
+    daily-summary.html
+  advice/
+    analysis.html
+    alerts.html
+    basic.html
+  assets/
+    styles.css
+    app.js
