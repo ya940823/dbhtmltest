@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>新增每日飲食紀錄｜智慧健康飲食系統</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script defer src="../assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap"><div class="app">
+    <header class="topbar">
+      <div class="brand"><div class="logo">LOGO</div><div><div style="font-size:14px;">新增每日飲食紀錄</div><div class="muted" style="font-size:12px;">選擇日期/餐別/食物/份量（示意）</div></div></div>
+      <div class="top-actions" data-auth-slot></div>
+    </header>
+
+    <nav class="mainnav">
+      <div class="navlinks">
+        <a href="../index.html">首頁</a>
+        <a href="../food/search.html">食物營養查詢</a>
+        <a href="../log/new.html" aria-current="page">飲食紀錄管理</a>
+        <a href="../log/history.html">歷史紀錄</a>
+        <a href="../goals.html">健康目標</a>
+        <a href="../advice/basic.html">健康建議</a>
+      </div>
+    </nav>
+
+    <nav class="subnav">
+      <a href="./new.html" aria-current="page">新增每日飲食紀錄</a>
+      <a href="./history.html">查詢歷史飲食紀錄</a>
+      <a href="./daily-summary.html">每日營養攝取統計</a>
+    </nav>
+
+    <div class="content">
+      <div class="card">
+        <h3>新增紀錄（示意表單）</h3>
+
+        <div class="row">
+          <div class="field">
+            <label for="date">選擇日期</label>
+            <input id="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="meal">選擇餐別</label>
+            <select id="meal">
+              <option>早餐</option><option>午餐</option><option>晚餐</option><option>點心</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="food">選擇食物</label>
+            <select id="food">
+              <option>雞胸肉</option><option>地瓜</option><option>無糖豆漿</option><option>香蕉</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="amount">輸入份量</label>
+            <input id="amount" placeholder="例如：1 份 / 100g / 1 杯" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="button" id="btnAdd">新增（示意）</button>
+          <a class="btn" href="../food/search.html">先去查食物</a>
+        </div>
+
+        <div class="section" style="border:1.5px solid var(--border); border-radius:var(--radius); margin-top:12px;">
+          <h2>今日紀錄（示意）</h2>
+          <p>未來可改成可刪除/可編輯的表格。</p>
+
+          <div class="table" role="table" aria-label="飲食紀錄示意表">
+            <div class="thead" role="row">
+              <div class="cell">日期</div>
+              <div class="cell">餐別</div>
+              <div class="cell">食物</div>
+              <div class="cell">份量</div>
+              <div class="cell hide-sm">熱量</div>
+              <div class="cell hide-sm">三大營養素</div>
+            </div>
+            <div class="trow" role="row">
+              <div class="cell">2026-05-22</div>
+              <div class="cell">午餐</div>
+              <div class="cell">雞胸肉 + 地瓜</div>
+              <div class="cell">1 份</div>
+              <div class="cell hide-sm">520</div>
+              <div class="cell hide-sm">P45 / F10 / C55</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footerbar">
+      <a href="../about.html">系統說明</a>
+      <span class="muted">｜</span>
+      <a href="../source.html">資料來源說明</a>
+      <span class="muted">｜</span>
+      <a href="../contact.html">聯絡資訊</a>
+    </footer>
+  </div></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => requireLoginHere());
+    document.getElementById("btnAdd").addEventListener("click", () => {
+      alert("示範：已新增飲食紀錄（目前未真正儲存）");
+    });
+  </script>
+</body>
+</html>

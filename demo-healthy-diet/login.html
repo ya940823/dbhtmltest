@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>登入｜智慧健康飲食系統</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">LOGO</div>
+          <div>
+            <div style="font-size:14px;">使用者登入</div>
+            <div class="muted" style="font-size:12px;">輸入 Email / 密碼（示意）</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <a class="pill" href="./index.html">回首頁</a>
+          <a class="pill" href="./register.html">註冊</a>
+        </div>
+      </header>
+
+      <nav class="mainnav">
+        <div class="navlinks">
+          <a href="./index.html">首頁</a>
+          <a href="./food/search.html">食物營養查詢</a>
+          <a href="./log/new.html">飲食紀錄管理</a>
+          <a href="./goals.html">健康目標</a>
+          <a href="./advice/basic.html">健康建議</a>
+        </div>
+      </nav>
+
+      <div class="content">
+        <div class="card">
+          <h3>使用者登入</h3>
+          <p>示範：不做真驗證，登入後會回首頁。</p>
+
+          <div class="row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="demo@example.com" />
+            </div>
+            <div class="field">
+              <label for="pw">密碼</label>
+              <input id="pw" type="password" placeholder="••••••••" />
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn primary" type="button" id="btnLogin">登入</button>
+            <a class="btn" href="./register.html">沒有帳號？去註冊</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footerbar">
+        <a href="./about.html">系統說明</a>
+        <span class="muted">｜</span>
+        <a href="./contact.html">聯絡資訊</a>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("btnLogin").addEventListener("click", () => {
+      const email = document.getElementById("email").value.trim() || "demo@example.com";
+      loginDemo(email, "Demo 使用者");
+      alert("登入成功（示範）");
+      location.href = "./index.html";
+    });
+  </script>
+</body>
+</html>

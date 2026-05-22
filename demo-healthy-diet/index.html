@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>首頁｜智慧健康飲食系統</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">LOGO</div>
+          <div>
+            <div style="font-size:14px;">系統名稱</div>
+            <div class="muted" style="font-size:12px;">智慧健康飲食系統（前端示範）</div>
+          </div>
+        </div>
+        <div class="top-actions" data-auth-slot></div>
+      </header>
+
+      <nav class="mainnav" aria-label="主導覽列">
+        <div class="navlinks">
+          <a href="./index.html" data-active="index.html">首頁</a>
+          <a href="./food/search.html" data-active="search.html">食物營養查詢</a>
+          <a href="./log/new.html" data-active="new.html">飲食紀錄管理</a>
+          <a href="./log/history.html" data-active="history.html">歷史紀錄</a>
+          <a href="./goals.html" data-active="goals.html">健康目標</a>
+          <a href="./advice/basic.html" data-active="basic.html">健康建議</a>
+        </div>
+      </nav>
+
+      <div class="content">
+        <div class="grid-3">
+          <aside class="side">
+            <div class="box-title">首頁</div>
+            <div class="box-sub">對應你的功能樹入口</div>
+            <ul class="list">
+              <li><a href="./about.html">系統介紹</a></li>
+              <li><a href="./food/search.html">食物搜尋入口</a></li>
+              <li><a href="./log/new.html">飲食紀錄入口</a></li>
+              <li><a href="./advice/basic.html">健康建議入口</a></li>
+            </ul>
+          </aside>
+
+          <main class="center">
+            <div class="box-title">首頁主要區塊</div>
+            <div class="box-sub">登入/登出｜會員專區｜飲食建議｜飲食紀錄｜目標</div>
+
+            <div class="cards">
+              <section class="card">
+                <h3>登入/登出（示範）</h3>
+                <p>右上角可登入/登出；登入後可進會員專區。</p>
+                <div class="actions">
+                  <a class="btn primary" href="./login.html">前往登入</a>
+                  <a class="btn" href="./register.html">註冊</a>
+                </div>
+              </section>
+
+              <section class="card">
+                <h3>會員專區</h3>
+                <p>查看/修改個人資料、健康目標設定。</p>
+                <div class="actions">
+                  <a class="btn primary" href="./member.html">進入會員專區</a>
+                  <a class="btn" href="./profile-view.html">查看個人資料</a>
+                </div>
+              </section>
+
+              <section class="card">
+                <h3>飲食建議</h3>
+                <p>營養攝取分析、提醒與基本建議。</p>
+                <div class="actions">
+                  <a class="btn primary" href="./advice/analysis.html">營養攝取分析</a>
+                  <a class="btn" href="./advice/alerts.html">提醒</a>
+                  <a class="btn" href="./advice/basic.html">基本建議</a>
+                </div>
+              </section>
+
+              <section class="card">
+                <h3>飲食紀錄</h3>
+                <p>新增每日飲食紀錄、查詢歷史、查看每日統計。</p>
+                <div class="actions">
+                  <a class="btn primary" href="./log/new.html">新增每日飲食紀錄</a>
+                  <a class="btn" href="./log/history.html">查詢歷史飲食紀錄</a>
+                  <a class="btn" href="./log/daily-summary.html">每日營養攝取統計</a>
+                </div>
+              </section>
+
+              <section class="card">
+                <h3>健康目標</h3>
+                <p>設定目標（示意）並查看建議攝取。</p>
+                <div class="actions">
+                  <a class="btn primary" href="./goals.html">前往健康目標</a>
+                </div>
+              </section>
+            </div>
+          </main>
+
+          <aside class="side">
+            <div class="box-title">飲食建議 / 近期提示</div>
+            <div class="box-sub">示意：右側區塊</div>
+            <ul class="list">
+              <li><a href="./advice/alerts.html">攝取過高或不足提醒</a></li>
+              <li><a href="./advice/basic.html">基本飲食調整建議</a></li>
+              <li><a href="./food/list.html">常用食物列表</a></li>
+            </ul>
+          </aside>
+        </div>
+
+        <section class="section">
+          <h2>快速摘要（示意）</h2>
+          <p>這裡未來可放：今日熱量進度條、P/F/C 圖表、最近 7 天趨勢等。</p>
+        </section>
+
+        <footer class="footerbar">
+          <a href="./about.html">系統說明</a>
+          <span class="muted">｜</span>
+          <a href="./source.html">資料來源說明</a>
+          <span class="muted">｜</span>
+          <a href="./contact.html">聯絡資訊</a>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

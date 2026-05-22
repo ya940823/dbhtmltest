@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>食物營養詳細資料｜智慧健康飲食系統</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script defer src="../assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap"><div class="app">
+    <header class="topbar">
+      <div class="brand"><div class="logo">LOGO</div><div><div style="font-size:14px;">營養詳細資料</div><div class="muted" style="font-size:12px;">對應功能樹：食物營養查詢 → 食物營養詳細資料</div></div></div>
+      <div class="top-actions" data-auth-slot></div>
+    </header>
+
+    <nav class="mainnav">
+      <div class="navlinks">
+        <a href="../index.html">首頁</a>
+        <a href="../food/search.html" aria-current="page">食物營養查詢</a>
+        <a href="../log/new.html">飲食紀錄管理</a>
+        <a href="../goals.html">健康目標</a>
+        <a href="../advice/basic.html">健康建議</a>
+      </div>
+    </nav>
+
+    <nav class="subnav">
+      <a href="./search.html">搜尋入口</a>
+      <a href="./categories.html">分類查詢</a>
+      <a href="./list.html">食物列表瀏覽</a>
+      <a href="./detail.html" aria-current="page">營養詳細資料</a>
+    </nav>
+
+    <div class="content">
+      <div class="card">
+        <h3>雞胸肉（示意）</h3>
+        <p class="muted">此頁可放：營養素、微量元素、過敏原、份量換算等。</p>
+
+        <div class="section" style="border:1.5px solid var(--border); border-radius:var(--radius);">
+          <p><b>每單位：</b>100g</p>
+          <p><b>熱量：</b>165 kcal</p>
+          <p><b>蛋白質：</b>31 g</p>
+          <p><b>脂肪：</b>3.6 g</p>
+          <p><b>碳水：</b>0 g</p>
+
+          <div class="actions" style="margin-top:10px;">
+            <a class="btn primary" href="../log/new.html">加入今日飲食紀錄</a>
+            <a class="btn" href="./list.html">回列表</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footerbar">
+      <a href="../about.html">系統說明</a>
+      <span class="muted">｜</span>
+      <a href="../source.html">資料來源說明</a>
+      <span class="muted">｜</span>
+      <a href="../contact.html">聯絡資訊</a>
+    </footer>
+  </div></div>
+</body>
+</html>

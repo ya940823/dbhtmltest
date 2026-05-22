@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>註冊｜智慧健康飲食系統</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">LOGO</div>
+          <div>
+            <div style="font-size:14px;">使用者註冊</div>
+            <div class="muted" style="font-size:12px;">填寫基本資料 → 建立帳密 → 完成註冊（示意）</div>
+          </div>
+        </div>
+        <div class="top-actions">
+          <a class="pill" href="./index.html">回首頁</a>
+          <a class="pill" href="./login.html">登入</a>
+        </div>
+      </header>
+
+      <nav class="mainnav">
+        <div class="navlinks">
+          <a href="./index.html">首頁</a>
+          <a href="./food/search.html">食物營養查詢</a>
+          <a href="./log/new.html">飲食紀錄管理</a>
+          <a href="./goals.html">健康目標</a>
+          <a href="./advice/basic.html">健康建議</a>
+        </div>
+      </nav>
+
+      <div class="content">
+        <div class="card">
+          <h3>使用者註冊</h3>
+          <p>示範：送出後直接視為註冊成功並登入。</p>
+
+          <div class="row">
+            <div class="field">
+              <label for="name">姓名</label>
+              <input id="name" placeholder="王小明" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="demo@example.com" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="pw">建立帳號密碼</label>
+              <input id="pw" type="password" placeholder="••••••••" />
+            </div>
+            <div class="field">
+              <label for="pw2">確認密碼</label>
+              <input id="pw2" type="password" placeholder="••••••••" />
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn primary" type="button" id="btnRegister">完成註冊</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("btnRegister").addEventListener("click", () => {
+      const name = document.getElementById("name").value.trim() || "Demo 使用者";
+      const email = document.getElementById("email").value.trim() || "demo@example.com";
+      setUser({ name, email });
+      localStorage.setItem("demo_logged_in", "1");
+      alert("註冊成功並登入（示範）");
+      location.href = "./index.html";
+    });
+  </script>
+</body>
+</html>
