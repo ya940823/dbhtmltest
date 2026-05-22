@@ -6,6 +6,28 @@
   <title>首頁｜智慧健康飲食系統</title>
   <link rel="stylesheet" href="./assets/styles.css" />
   <script defer src="./assets/app.js"></script>
+
+  <!-- Homepage-only polish (keeps your shared CSS untouched) -->
+  <style>
+    /* Replace 3-column (left/center/right) with 2-column (main + right tips) */
+    .home-layout{
+      display:grid;
+      grid-template-columns: 1fr 260px;
+      border-top:1.5px solid var(--border);
+      border-bottom:1.5px solid var(--border);
+    }
+    .home-main{ padding:14px; }
+
+    /* Improve card layout */
+    .cards{ grid-template-columns: 1fr 1fr; }
+    .cards .card{ min-height: 160px; }
+    .card .actions{ gap:10px; }
+
+    @media (max-width: 980px){
+      .home-layout{ grid-template-columns: 1fr; }
+      .cards{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -33,26 +55,16 @@
       </nav>
 
       <div class="content">
-        <div class="grid-3">
-          <aside class="side">
-            <div class="box-title">首頁</div>
-            <div class="box-sub">對應你的功能樹入口</div>
-            <ul class="list">
-              <li><a href="./about.html">系統介紹</a></li>
-              <li><a href="./food/search.html">食物搜尋入口</a></li>
-              <li><a href="./log/new.html">飲食紀錄入口</a></li>
-              <li><a href="./advice/basic.html">健康建議入口</a></li>
-            </ul>
-          </aside>
-
-          <main class="center">
+        <!-- Left orange sidebar removed (duplicate entry links) -->
+        <div class="home-layout">
+          <main class="home-main">
             <div class="box-title">首頁主要區塊</div>
             <div class="box-sub">登入/登出｜會員專區｜飲食建議｜飲食紀錄｜目標</div>
 
             <div class="cards">
               <section class="card">
-                <h3>登入/登出（示範）</h3>
-                <p>右上角可登入/登出；登入後可進會員專區。</p>
+                <h3>登入 / 註冊</h3>
+                <p>右上角可登入/登出；登入後可進會員專區與其他功能頁。</p>
                 <div class="actions">
                   <a class="btn primary" href="./login.html">前往登入</a>
                   <a class="btn" href="./register.html">註冊</a>
@@ -95,17 +107,32 @@
                   <a class="btn primary" href="./goals.html">前往健康目標</a>
                 </div>
               </section>
+
+              <section class="card">
+                <h3>食物營養查詢</h3>
+                <p>搜尋食物、查看營養詳細資料與列表。</p>
+                <div class="actions">
+                  <a class="btn primary" href="./food/search.html">食物搜尋入口</a>
+                  <a class="btn" href="./food/list.html">常用食物列表</a>
+                </div>
+              </section>
             </div>
           </main>
 
-          <aside class="side">
+          <aside class="side" aria-label="飲食建議 / 近期提示">
             <div class="box-title">飲食建議 / 近期提示</div>
-            <div class="box-sub">示意：右側區塊</div>
+            <div class="box-sub">示意：右側區塊</div>            
+示意：右側區塊
             <ul class="list">
               <li><a href="./advice/alerts.html">攝取過高或不足提醒</a></li>
               <li><a href="./advice/basic.html">基本飲食調整建議</a></li>
-              <li><a href="./food/list.html">常用食物列表</a></li>
+              <li><a href="./food/list.html">常用食物列表</a></li>              
+常用食物清單
             </ul>
+
+            <div style="margin-top:12px;" class="muted">
+              <b>小提醒：</b>若用 GitHub Pages（Project Pages），請保持相對路徑（本頁已使用相對路徑）。
+            </div>
           </aside>
         </div>
 
